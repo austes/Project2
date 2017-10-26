@@ -9,6 +9,7 @@ import {  Platform,  StyleSheet,  Text,  View, Button, TouchableOpacity, Alert} 
 
 export default class App extends Component<{}> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   render() {
     return (
         <View>
@@ -35,6 +36,53 @@ export default class App extends Component<{}> {
         </View>
     );
   }
+=======
+
+    constructor() {
+        super()
+
+        this.state = {
+            backgroundColor1: "white",
+            backgroundColor2: "white",
+            backgroundColor3: "white",
+            backgroundColor4: "white"
+        };
+
+    }
+
+    render() {
+        var boxNme = ["BOX1","BOX4","BOX3","BOX4"];
+
+        return (
+            <View style={styles.container}>
+              <View style={styles.kairys}>
+                <TouchableOpacity style={styles.mygtukas}
+                                  onPress={() => {this.setState({backgroundColor1: "yellow"})}}>
+                  <Text style={styles.mygtukoText}>Button1</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.mygtukas}
+                                  onPress={() => {this.setState({backgroundColor2: "red"})}}>
+                  <Text style={styles.mygtukoText}>Button2</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.mygtukas}
+                                  onPress={() => {this.setState({backgroundColor3: "blue"})}}>
+                  <Text style={styles.mygtukoText}>Button3</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.mygtukas}
+                                  onPress={() => {this.setState({backgroundColor4: "green"})}}>
+                  <Text style={styles.mygtukoText}>Button4</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.desinys}>
+                <Text style={[styles.box, {backgroundColor: this.state.backgroundColor1}]}>{boxNme[0]}</Text>
+                <Text style={[styles.box, {backgroundColor: this.state.backgroundColor2}]}>{boxNme[1]}</Text>
+                <Text style={[styles.box, {backgroundColor: this.state.backgroundColor3}]}>{boxNme[2]}</Text>
+                <Text style={[styles.box, {backgroundColor: this.state.backgroundColor4}]}>{boxNme[3]}</Text>
+              </View>
+            </View>
+        );
+    }
+>>>>>>> fb71946d11e8e197c953dcd6a91f40af70b7d0c1
 }
 
 const styles = StyleSheet.create({
@@ -177,5 +225,8 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       textAlignVertical: 'center'
   },
+<<<<<<< HEAD
 >>>>>>> create functionality
+=======
+>>>>>>> fb71946d11e8e197c953dcd6a91f40af70b7d0c1
 });
