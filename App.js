@@ -20,7 +20,7 @@ export default class App extends Component<{}> {
         };
 
     }
-    
+
     render() {
         var boxNme = ["BOX1","BOX4","BOX3","BOX4"];
 
